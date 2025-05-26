@@ -1,0 +1,26 @@
+.input-to-do{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 50px;
+    border-radius: 10px;
+    border-color: cornflowerblue;
+    background-color: cadetblue;
+    gap: 10px;
+}
+
+p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    border: 2px solid blue ;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
