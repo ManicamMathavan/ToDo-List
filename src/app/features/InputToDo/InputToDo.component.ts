@@ -1,6 +1,6 @@
-import { Component, ElementRef, ViewChild, viewChild } from "@angular/core";
+import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { TaskComponent } from "../Task/Task.component";
+import { Task } from "../../core/model/task.model";
 @Component({
     selector: "app-input-to-do",
     templateUrl: "./InputToDo.component.html",
@@ -9,15 +9,17 @@ import { TaskComponent } from "../Task/Task.component";
 })
 
 export class InputToDoComponent {
-    input_value : String = "";
-    @ViewChild ("input_to_do") monRef! : ElementRef
-
-    constructor() {
-        
-    }
-
-    ngAfterViewInit() {
-        console.log(this.monRef.nativeElement.getBoundingClientRect());
-        console.log(5)
+    input_value : string = "";
+    tasks : Task[] = [];
+    id : number = 0;
+    addTask() {
+        if (this.input_value.trim() !== "") {
+            this.tasks.push({
+                id: this.id++,
+                title: this.input_value,
+                completed: false
+            });
+            this.input_value = "";
+        }
     }
 }

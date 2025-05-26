@@ -1,0 +1,11 @@
+<div class="main-container">
+  <button routerLink="" class="btn btn-primary">Page todo list</button>
+  <div class="users-container">
+    @for (user of users(); track user.id) {
+    <div class="user-container">
+      <p>id : {{ user.id }}</p>
+      <p>name : {{ user.name }}</p>
+    </div>
+    }
+  </div>
+</div>

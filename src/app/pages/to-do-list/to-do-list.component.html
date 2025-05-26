@@ -1,0 +1,9 @@
+<div class="main-container">
+  <app-input-to-do />
+  <button class="btn btn-primary" routerLink="/display-data-base">
+    Page affichage base de données
+  </button>
+  @for(task of tasks; track task.id) {
+  <app-task [task]="task" (deleteTask)="deleteTask($event)"></app-task>
+  }
+</div>

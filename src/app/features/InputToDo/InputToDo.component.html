@@ -1,5 +1,7 @@
-    <div #input_to_do class="input-to-do" >
-        <p>Entrer une tâche : </p>
-        <input type="text" [(ngModel)]="input_value"/>
-    </div>
-
+<div class="input-to-do">
+      <p>Entrer une tâche :</p>
+  <form (ngSubmit)="addTask()">
+    <input  [(ngModel)]="input_value" name="input_value" />
+    <button class="btn btn-success" type="submit">Valider</button>
+  </form>
+</div>

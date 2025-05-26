@@ -1,5 +1,8 @@
 <div class="main-container">
-    <p>{{task}}</p>
-    <button type="button" class="btn btn-danger">Valider</button>
-    <button>Supprimer</button>
+    <p [class.completed]="task?.completed">{{task?.title}}</p>
+    <button (click)="toggleCompletion()" class="btn btn-success">Valider</button>
+    <button (click)="delete()" class="btn btn-danger">Supprimer</button>
 </div>
+
+
+<!-- [ngStyle]="{textDecoration: 'line-through', color:'red'}" -->
