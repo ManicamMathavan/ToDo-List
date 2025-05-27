@@ -17,6 +17,10 @@ p {
     color: white;
 }
 
+.white{
+    color: white;
+}
+
 .completed {
     text-decoration: line-through;
     color: red;
